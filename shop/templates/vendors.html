@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+        <th>Phone</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <th>0725445130</th>
+        <th><img src="{% static 'images\avatar.png' %}" style="width: 40px; height: 30px;"></th>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <th>0725445130</th>
+        <th><img src="{% static 'images\avatar.png' %}" style="width: 40px; height: 30px;"></th>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+        <th>0725445130</th>
+        <th><img src="{% static 'images\avatar.png' %}" style="width: 40px; height: 30px;"></th>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}
