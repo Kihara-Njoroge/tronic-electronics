@@ -26,7 +26,7 @@ SECRET_KEY = '+&y#+pwalu5_=t-b=4(4oyx$uckdik+%v!#x)jyzk$gy03wxle'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tronic-electronics.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
