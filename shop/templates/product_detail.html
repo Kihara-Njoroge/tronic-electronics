@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="card" style="width: 70%;">
+
+    <div class="card-body">
+      <h5 class="card-title">{{product.name}}</h5>
+      <img
+      src="{{product.imageURL}}"
+      alt=""
+      class="thumbnail"
+      style="width:30%;"
+    />
+    <hr>
+      <p class="card-text"><span style="font-weight: bold;">Description</span>:{{product.description}}</p>
+      <p class="card-text"><span style="font-weight: bold;">Vendor:</span>{{product.vendorName}}</p>
+      <h4 style="float: left;">${{product.price|floatformat:2}}</h4>
+      <button data-product={{product.id}} data-action="add" class="btn btn-outline-success add-btn update-cart" style="float: right;">Add to cart</button>
+    </div>
+  </div>
+</br>
+  <div class="container">
+  <h5>Similar Products</h5>
+  <div class="row">
+    {% for product in products_category %}
+    <div class="col-lg-4">
+      <div class="box-element product">
+        <img
+          src="{{product.imageURL}}"
+          alt=""
+          class="thumbnail"
+        />
+        <h6><strong>{{product.name}}</strong></h6>
+        <hr />
+        <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to cart</button>
+        <a href="{% url 'product_detail' product.id %}" class="btn btn-outline-success">View</a>
+        <h4 style="float: right;">${{product.price|floatformat:2}}</h4>
+      </div>
+      <br>
+    </div>
+    {% endfor %}
+</div>
+    
+{% endblock %}

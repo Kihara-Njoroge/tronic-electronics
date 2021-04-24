@@ -14,30 +14,35 @@
       </tr>
     </thead>
     <tbody>
+      {% for obj in page_obj %}
       <tr>
         <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <th>0725445130</th>
-        <th><img src="{% static 'images\avatar.png' %}" style="width: 40px; height: 30px;"></th>
+        <td>{{ obj.first_name }}</td>
+        <td>{{ obj.second_name }}</td>
+        <td>{{obj.email}}</td>
+        <th>{{obj.phone}}</th>
+        <th><img src="{{ obj.imageURL}}" style="width: 40px; height: 30px;"></th>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <th>0725445130</th>
-        <th><img src="{% static 'images\avatar.png' %}" style="width: 40px; height: 30px;"></th>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <th>0725445130</th>
-        <th><img src="{% static 'images\avatar.png' %}" style="width: 40px; height: 30px;"></th>
-      </tr>
+      {% endfor %}
     </tbody>
   </table>
+  <style>
+    @media screen and (max-width: 420px){
+      tr th:nth-child(4),tr td:nth-child(4),
+      tr th:nth-child(6),tr td:nth-child(6),
+      tr th:nth-child(7),tr td:nth-child(7){
+        display:none;
+      }
+
+    }
+    @media screen and (max-width: 280px){
+      tr th:nth-child(2),tr td:nth-child(2),
+      tr th:nth-child(4),tr td:nth-child(4),
+      tr th:nth-child(6),tr td:nth-child(6),
+      tr th:nth-child(7),tr td:nth-child(7){
+        display:none;
+      }
+
+    }
+  </style>
 {% endblock %}

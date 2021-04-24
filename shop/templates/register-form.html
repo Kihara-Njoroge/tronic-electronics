@@ -4,21 +4,25 @@
 {% block content %}
 
 <div class="card">
-    <form">
+    <form method="POST">
+      {% csrf_token %}
        <h2 class="title"> Sign Up</h2>
        <p class="subtitle">Already have an account? <a href="{% url 'login' %}"> sign In</a></p>
        <div class="email-login">
         <label for="name"> <b>Fisrt Name</b></label>
-        <input type="text" placeholder="Enter Your Fisrt Name" name="Fname" required>
-        <label for="name"> <b>Second Name</b></label>
-        <input type="text" placeholder="Enter Your Second Name" name="Sname" required>
-        <label for="name"> <b>Phone</b></label>
-        <input type="text" placeholder="Enter Your Phone Number" name="phn" required>
+        {{form.first_name}}
+        <label for="name"> <b>Last Name</b></label>
+        {{form.last_name}}
+        <label for="name"> <b>Username</b></label>
+          {{form.username}}
           <label for="email"> <b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="uname" required>
+          {{form.email}}
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          {{form.password1}}
+          <label for="psw"><b>Confirm Password</b></label>
+          {{form.password2}}
        </div>
+       {{form.errors}}
        <button class="cta-btn">Sign Up</button>
     </form>
  </div>

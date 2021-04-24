@@ -1,18 +1,26 @@
 from django.urls import path
-from . import views
+from shop.views import(
+    CheckoutPage, home,
+    cartPage, vendors, loginPage,
+    contactPage, registerPage, terms,
+    privacy, faq, updateItem, processOrder,
+    productDetail, logoutUser
+)
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('tronic-vendors/', views.vendors, name='vendors'),
-    path('contact-us/', views.contactPage, name='contact'),
-    path('cart/', views.cartPage, name='cart'),
-    path('login/', views.loginPage, name='login'),
-    path('register/', views.registerPage, name='register'),
-    path('checkout/', views.checkout, name='checkout'),
+    path('', home, name='home'),
+    path('tronic-vendors/', vendors, name='vendors'),
+    path('contact-us/', contactPage, name='contact'),
+    path('cart/', cartPage, name='cart'),
+    path('checkout/', CheckoutPage, name='checkout'),
+    path('update_item/', updateItem, name='update_item'),
+    path('process_order/', processOrder, name='process_order'),
+    path('login/', loginPage, name='login'),
+    path('logout/', logoutUser, name='logout'),
+    path('register/', registerPage, name='register'),
+    path('product_detail/<str:pk>/', productDetail, name='product_detail'),
 
-
-
-    path('terms&conditions/', views.terms, name='termsandconditions'),
-    path('privacy-policy/', views.privacy, name='privacy-policy'),
-    path('tronic-faq/',  views.faq, name='faq'),
+    path('terms&conditions/', terms, name='termsandconditions'),
+    path('privacy-policy/', privacy, name='privacy-policy'),
+    path('tronic-faq/',  faq, name='faq'),
 ]
