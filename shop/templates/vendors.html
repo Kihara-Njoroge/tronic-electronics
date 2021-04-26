@@ -8,9 +8,7 @@
         <th></th>
         <th scope="col">First</th>
         <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-        <th>Phone</th>
-        <th>Image</th>
+        <th scope="col">Email</th>
       </tr>
     </thead>
     <tbody>
@@ -20,12 +18,13 @@
         <td>{{ obj.first_name }}</td>
         <td>{{ obj.second_name }}</td>
         <td>{{obj.email}}</td>
-        <th>{{obj.phone}}</th>
-        <th><img src="{{ obj.imageURL}}" style="width: 40px; height: 30px;"></th>
       </tr>
       {% endfor %}
     </tbody>
-  </table>
+  </table><br>
+  <span>
+    <h5>Want to Become a Vendor? Register <a href="{% url 'vendor_registration' %}">here</a>.</h5>
+</span>
   <style>
     @media screen and (max-width: 420px){
       tr th:nth-child(4),tr td:nth-child(4),

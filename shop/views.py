@@ -1,3 +1,7 @@
+from .filters import ProductFilter
+from .utils import cookieCart, cartData, guestOrder
+from .forms import *
+from .models import *
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 from django.core.paginator import Paginator
@@ -14,10 +18,7 @@ from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 import stripe
 import datetime
-from .models import *
-from .forms import *
-from .utils import cookieCart, cartData, guestOrder
-from .filters import ProductFilter
+from .decorators import *
 
 
 def home(request):
@@ -184,6 +185,39 @@ def registerPage(request):
     context = {'cartItems': cartItems, 'form': form}
 
     return render(request, 'register-form.html', context)
+
+# Vendor Registration
+
+
+@csrf_exempt
+def VendorRegisterPage(request):
+    form = CreateVendorForm()
+    if request.method == 'POST':
+        form = CreateVendorForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            username = form.cleaned_data.get('username')
+
+            messages.success(
+                request, 'Vendors account created successfully for ' + username)
+
+            return redirect('login')
+
+    context = {'form': form}
+
+    return render(request, 'vendor_registration.html', context)
+
+
+def accountSettings(request):
+    customer = request.user.customer
+    form = CustomerForm(instance=customer)
+
+    if request.method == 'POST':
+        form = CustomerForm(request.POST, request.FILES, instance=customer)
+        if form.is_valid():
+            form.save()
+    context = {'form': form}
+    return render(request, 'profile_settings.html', context)
 
 
 def productDetail(request, pk):

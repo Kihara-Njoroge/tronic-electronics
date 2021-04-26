@@ -16,3 +16,23 @@ class CreateUserForm(UserCreationForm):
             'password1',
             'password2',
         ]
+
+
+class CreateVendorForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = [
+            'first_name',
+            'last_name',
+            'username',
+            'email',
+            'password1',
+            'password2',
+        ]
+
+
+class CustomerForm(ModelForm):
+    class Meta:
+        model = Customer
+        fields = '__all__'
+        exclude = ['user']
