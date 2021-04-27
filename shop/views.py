@@ -125,17 +125,6 @@ def processOrder(request):
     return JsonResponse('Payment submitted..', safe=False)
 
 
-def vendors(request):
-    data = cartData(request)
-    cartItems = data['cartItems']
-
-    vendors = Vendor.objects.all()
-    paginator = Paginator(vendors, 10)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    context = {'page_obj': page_obj, 'cartItems': cartItems}
-    return render(request, 'vendors.html', context)
-
 
 def contactPage(request):
     data = cartData(request)
