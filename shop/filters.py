@@ -6,10 +6,6 @@ from .models import *
 class ProductFilter(django_filters.FilterSet):
     name = CharFilter(field_name='name',
                       lookup_expr='icontains', label='Product')
-    price_gt = NumberFilter(
-        field_name='price', lookup_expr='gt', label='Price Min')
-    price_lt = NumberFilter(
-        field_name='price', lookup_expr='lt', label='Price Max')
 
     class Meta:
         model = Product
