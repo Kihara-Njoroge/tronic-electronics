@@ -15,14 +15,4 @@ def customer_profile(sender, instance, created, ** kwargs):
 post_save.connect(customer_profile, sender=User)
 
 
-def vendor_profile(sender, instance, created, **kwargs):
-    if created:
-        group = Group.objects.get(name='vendor')
-        instance.groups.add(group)
-        Vendor.objects.create(first_name=instance.first_name,
-                              second_name=instance.last_name, email=instance.email),
 
-        print('Vendors profile created')
-
-
-post_save.connect(vendor_profile, sender=User)
