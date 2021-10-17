@@ -17,4 +17,7 @@ $(document).ready(function() {
   $("#sidebarCollapseX").on("click", function() {
     $(".overlay").removeClass("visible");
   });
+  
 });
+
+

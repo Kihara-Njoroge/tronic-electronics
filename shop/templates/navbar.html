@@ -26,24 +26,78 @@
     </div>
   </div>
 </nav>
-
+{% load static %}
 <nav class="navbar navbar-expand-md navbar-light bg-light sub-menu">
   <div class="container">
     <div class="collapse navbar-collapse" id="navbar">
         <a class="navbar-brand" href="{% url 'home' %}">
           <h4 class="font-weight-bold">
-            <i class="fas fa-bolt"></i>TRONIC<i class="fas fa-bolt"></i>
-          </h4>
+            <h1 style="font-family: 'Fashion', sans-serif; font-weight: bold; color: hotpink; margin-left: -90px;">
+             Infinity Fashion
+             
+          </h1>
+          
         </a>
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
           <a class="nav-link" href="{% url 'home' %}"
-            style="color: black;">Products</a
+            style="color: black;">Clothes</a
+          >
+        </li>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}"
+            style="color: black;">Shoes</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact' %}" style="color: black;">Contact Us</a>
+          <a class="nav-link" href="{% url 'home' %}"
+            style="color: black;">Watches</a
+          >
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}" style="color: black;">Lingerie</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}"
+              style="color: black;">Bags</a
+            ></li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}" style="color: black;">Accessories</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home' %}"
+            style="color: black;">Beauty & Skin Care</a
+          ></li>
+     
+      
+      <ul class="navbar-nav" style="margin-right: -90px;">
+        <li class="nav-item">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: black;"
+            >
+            <i class="fas fa-search fa-lg"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="padding: 10px;">
+              <div class="card" style="padding:5px; border: 0;">
+                
+              <form method="get">
+                {{ myFilter.form }}
+              </form>
+              </div>
+            </div>
+          
+        {% if request.user.is_active %}
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -55,31 +109,44 @@
             aria-expanded="false"
             style="color: black;"
           >
-            Support
+          <i class="far fa-user fa-lg" style="color: black;"></i>
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Delivery Information</a>
-            <a class="dropdown-item" href="{% url 'privacy-policy' %}">Privacy Policy</a>
-            <a class="dropdown-item" href="{% url 'termsandconditions' %}">Terms & Conditions</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="padding: 10px;">
+            <a class="dropdown-item" href="#">Account Information</a>
+            <a class="dropdown-item" href="{% url 'privacy-policy' %}">My Orders</a>
+            <a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a>
           </div>
         </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="btn btn-link" href="{% url 'cart' %}">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            <span class="badge badge-danger" >{{ cartItems }}</span>
-          </a>
-        </li>
-        {% if request.user.is_active %}
-        <span style="padding-right: 5px; margin-left: 10px; margin-top: 10px;">Hello, {{request.user}}</span>
-        <span style="padding-right: 5px; margin-left: 10px; margin-top: 10px;" ><a href="{% url 'logout' %}">Logout</a></span>
+        </div>
         {% else %}
-        <li class="nav-item ml-md-3">
-          <a class="btn btn-primary" style="border-radius: 30px; width:95px;" href="{% url 'login' %}"
-            ><i class="bx bxs-user-circle mr-1"></i>Login</a
-          >    
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            style="color: black;"
+          >
+          <i class="far fa-user fa-lg"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" style="color: black;">Login/Register</a>
+            <a class="dropdown-item" href="{% url 'login' %}" style="color: gray;">Login</a>
+            <a class="dropdown-item" href="{% url 'register' %}" style="color: gray;">Regsiter</a>    
+          </div>
         </li>
+        <a class="btn btn-link" href="{% url 'cart' %}">
+          <i class="fas fa-shopping-bag fa-2x" style="color:black;"></i>
+          {% if cartItems <= 0 %}
+          <span> </span>
+          {% else %}
+          <span>{{ cartItems }}</span>
+          {% endif %}
+        </a>
+        </div>  
         {% endif %}
       </ul>
     </div>
