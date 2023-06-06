@@ -131,16 +131,3 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# AWS configuration
-AWS_QUERYSTRING_AUTH = False
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
-AWS_ACCESS_KEY_ID = 'AKIA2BLYWF2XZ4BS5YMQ'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'tronic-electronics'
-
-
-STRIPE_SECRET_KEY = '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'
-STRIPE_PUBLIC_KEY = 'pk_live_51IQ5svKBmboLx0KkVMShBSXZr3irIY9NIucpzTG4AURpKqeLmuaJlZFcDNlBMSyLhmGowFEW7pc4TgO7F94hDI39007irOcF1V'
-STRIPE_WEBHOOK_SECRET = 'whsec_9TpoLveeo2I8780bNZgu1QbUDmKqcGdC'
