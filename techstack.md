@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 Kihara-Njoroge/tronic-electronics is built on the following main stack:
+
 - [Python](https://www.python.org) – Languages
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
@@ -12,11 +13,13 @@ Kihara-Njoroge/tronic-electronics is built on the following main stack:
 - [Protobuf](https://developers.google.com/protocol-buffers/) – Serialization Frameworks
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 Kihara-Njoroge/tronic-electronics is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1839/q5uAkmy7.png' alt='SQLAlchemy'/> [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
@@ -27,14 +30,15 @@ Kihara-Njoroge/tronic-electronics is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/4393/ma2jqJKH_400x400.png' alt='Protobuf'/> [Protobuf](https://developers.google.com/protocol-buffers/) – Serialization Frameworks
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [Kihara-Njoroge/tronic-electronics](https://github.com/Kihara-Njoroge/tronic-electronics)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|15<br/>Tools used|11/13/23 <br/>Report generated|
+|15<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -163,12 +167,12 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[PyPDF2](https://pypi.org/PyPDF2)|v1.26.0|10/17/21|Babuuh |Other|[CVE-2023-36810](https://github.com/advisories/GHSA-jrm6-h9cq-8gqw) (Moderate)<br/>[CVE-2022-24859](https://github.com/advisories/GHSA-xcjx-m2pj-8g79) (Moderate)|
-|[boto3](https://pypi.org/boto3)|v1.17.99|10/17/21|Babuuh |Apache-2.0|N/A|
-|[wrapt](https://pypi.org/wrapt)|v1.12.1|10/17/21|Babuuh |BSD-2-Clause|N/A|
-|[zipp](https://pypi.org/zipp)|v1.0.0|10/17/21|Babuuh |MIT|N/A|
+|[PyPDF2](https://pypi.org/project/PyPDF2)|v1.26.0|10/17/21|Babuuh |Other|[CVE-2023-36810](https://github.com/advisories/GHSA-jrm6-h9cq-8gqw) (Moderate)<br/>[CVE-2022-24859](https://github.com/advisories/GHSA-xcjx-m2pj-8g79) (Moderate)|
+|[boto3](https://pypi.org/project/boto3)|v1.17.99|10/17/21|Babuuh |Apache-2.0|N/A|
+|[wrapt](https://pypi.org/project/wrapt)|v1.12.1|10/17/21|Babuuh |BSD-2-Clause|N/A|
+|[zipp](https://pypi.org/project/zipp)|v1.0.0|10/17/21|Babuuh |MIT|N/A|
 
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
