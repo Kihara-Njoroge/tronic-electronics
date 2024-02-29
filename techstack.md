@@ -3,14 +3,14 @@
 ## Tech Stack
 Kihara-Njoroge/tronic-electronics is built on the following main stack:
 
-- [Python](https://www.python.org) – Languages
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
-- [NumPy](http://www.numpy.org/) – Data Science Tools
 - [Jinja](https://palletsprojects.com/p/jinja/) – Templating Languages & Extensions
-- [Pillow](https://python-pillow.github.io/) – Image Processing and Management
+- [Python](https://www.python.org) – Languages
 - [Matplotlib](http://matplotlib.org) – Charting Libraries
 - [Protobuf](https://developers.google.com/protocol-buffers/) – Serialization Frameworks
+- [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
+- [Pillow](https://python-pillow.github.io/) – Image Processing and Management
+- [NumPy](http://www.numpy.org/) – Data Science Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -20,14 +20,14 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 Kihara-Njoroge/tronic-electronics is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1839/q5uAkmy7.png' alt='SQLAlchemy'/> [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
-- <img width='25' height='25' src='https://img.stackshare.io/service/2179/default_332f874a2edb2686f578aa6389313efcea1eec41.png' alt='NumPy'/> [NumPy](http://www.numpy.org/) – Data Science Tools
 - <img width='25' height='25' src='https://img.stackshare.io/service/2303/New_Project__20_.png' alt='Jinja'/> [Jinja](https://palletsprojects.com/p/jinja/) – Templating Languages & Extensions
-- <img width='25' height='25' src='https://img.stackshare.io/service/2375/default_1f67b0ca7416a9f52beb655f90b5602d5ef74b75.jpg' alt='Pillow'/> [Pillow](https://python-pillow.github.io/) – Image Processing and Management
+- <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/2993/2DZC4KaA_400x400.jpg' alt='Matplotlib'/> [Matplotlib](http://matplotlib.org) – Charting Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/4393/ma2jqJKH_400x400.png' alt='Protobuf'/> [Protobuf](https://developers.google.com/protocol-buffers/) – Serialization Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/1839/q5uAkmy7.png' alt='SQLAlchemy'/> [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
+- <img width='25' height='25' src='https://img.stackshare.io/service/2375/default_1f67b0ca7416a9f52beb655f90b5602d5ef74b75.jpg' alt='Pillow'/> [Pillow](https://python-pillow.github.io/) – Image Processing and Management
+- <img width='25' height='25' src='https://img.stackshare.io/service/2179/default_332f874a2edb2686f578aa6389313efcea1eec41.png' alt='NumPy'/> [NumPy](http://www.numpy.org/) – Data Science Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -38,7 +38,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [Kihara-Njoroge/tronic-electronics](https://github.com/Kihara-Njoroge/tronic-electronics)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|15<br/>Tools used|01/05/24 <br/>Report generated|
+|15<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
